@@ -1,0 +1,21 @@
+This OS-related info was saved from this machine with os-prober at 2024-03-03-2241
+/dev/sda1:Debian GNU/Linux 12 (bookworm):Debian:linux
+*****************************************************.
+This Linux boot related info was saved from this machine with linux-boot-prober at 2024-03-03-2241
+/dev/sda1:/dev/sda1:Debian GNU/Linux:/boot/vmlinuz-6.1.0-18-amd64:/boot/initrd.img-6.1.0-18-amd64:root=UUID=e359ad2f-1cad-445b-8ef5-103b9621d5d7 ro quiet
+/dev/sda1:/dev/sda1:Debian GNU/Linux, with Linux 6.1.0-18-amd64:/boot/vmlinuz-6.1.0-18-amd64:/boot/initrd.img-6.1.0-18-amd64:root=UUID=e359ad2f-1cad-445b-8ef5-103b9621d5d7 ro quiet
+/dev/sda1:/dev/sda1:Debian GNU/Linux, with Linux 6.1.0-18-amd64 (recovery mode):/boot/vmlinuz-6.1.0-18-amd64:/boot/initrd.img-6.1.0-18-amd64:root=UUID=e359ad2f-1cad-445b-8ef5-103b9621d5d7 ro single
+/dev/sda1:/dev/sda1:Debian GNU/Linux, with Linux 6.1.0-17-amd64:/boot/vmlinuz-6.1.0-17-amd64:/boot/initrd.img-6.1.0-17-amd64:root=UUID=e359ad2f-1cad-445b-8ef5-103b9621d5d7 ro quiet
+/dev/sda1:/dev/sda1:Debian GNU/Linux, with Linux 6.1.0-17-amd64 (recovery mode):/boot/vmlinuz-6.1.0-17-amd64:/boot/initrd.img-6.1.0-17-amd64:root=UUID=e359ad2f-1cad-445b-8ef5-103b9621d5d7 ro single
+/dev/sda1:/dev/sda1:Debian GNU/Linux, with Linux 6.1.0-16-amd64:/boot/vmlinuz-6.1.0-16-amd64:/boot/initrd.img-6.1.0-16-amd64:root=UUID=e359ad2f-1cad-445b-8ef5-103b9621d5d7 ro quiet
+/dev/sda1:/dev/sda1:Debian GNU/Linux, with Linux 6.1.0-16-amd64 (recovery mode):/boot/vmlinuz-6.1.0-16-amd64:/boot/initrd.img-6.1.0-16-amd64:root=UUID=e359ad2f-1cad-445b-8ef5-103b9621d5d7 ro single
+/dev/sda1:/dev/sda1:Debian GNU/Linux, with Linux 6.1.0-15-amd64:/boot/vmlinuz-6.1.0-15-amd64:/boot/initrd.img-6.1.0-15-amd64:root=UUID=e359ad2f-1cad-445b-8ef5-103b9621d5d7 ro quiet
+/dev/sda1:/dev/sda1:Debian GNU/Linux, with Linux 6.1.0-15-amd64 (recovery mode):/boot/vmlinuz-6.1.0-15-amd64:/boot/initrd.img-6.1.0-15-amd64:root=UUID=e359ad2f-1cad-445b-8ef5-103b9621d5d7 ro single
+/dev/sda1:/dev/sda1:Debian GNU/Linux, with Linux 6.1.0-14-amd64:/boot/vmlinuz-6.1.0-14-amd64:/boot/initrd.img-6.1.0-14-amd64:root=UUID=e359ad2f-1cad-445b-8ef5-103b9621d5d7 ro quiet
+/dev/sda1:/dev/sda1:Debian GNU/Linux, with Linux 6.1.0-14-amd64 (recovery mode):/boot/vmlinuz-6.1.0-14-amd64:/boot/initrd.img-6.1.0-14-amd64:root=UUID=e359ad2f-1cad-445b-8ef5-103b9621d5d7 ro single
+/dev/sda1:/dev/sda1:Debian GNU/Linux, with Linux 6.1.0-13-amd64:/boot/vmlinuz-6.1.0-13-amd64:/boot/initrd.img-6.1.0-13-amd64:root=UUID=e359ad2f-1cad-445b-8ef5-103b9621d5d7 ro quiet
+/dev/sda1:/dev/sda1:Debian GNU/Linux, with Linux 6.1.0-13-amd64 (recovery mode):/boot/vmlinuz-6.1.0-13-amd64:/boot/initrd.img-6.1.0-13-amd64:root=UUID=e359ad2f-1cad-445b-8ef5-103b9621d5d7 ro single
+/dev/sda1:/dev/sda1:Debian GNU/Linux, with Linux 6.1.0-12-amd64:/boot/vmlinuz-6.1.0-12-amd64:/boot/initrd.img-6.1.0-12-amd64:root=UUID=e359ad2f-1cad-445b-8ef5-103b9621d5d7 ro quiet
+/dev/sda1:/dev/sda1:Debian GNU/Linux, with Linux 6.1.0-12-amd64 (recovery mode):/boot/vmlinuz-6.1.0-12-amd64:/boot/initrd.img-6.1.0-12-amd64:root=UUID=e359ad2f-1cad-445b-8ef5-103b9621d5d7 ro single
+/dev/sda1:/dev/sda1:Debian GNU/Linux, with Linux 6.1.0-10-amd64:/boot/vmlinuz-6.1.0-10-amd64:/boot/initrd.img-6.1.0-10-amd64:root=UUID=e359ad2f-1cad-445b-8ef5-103b9621d5d7 ro quiet
+/dev/sda1:/dev/sda1:Debian GNU/Linux, with Linux 6.1.0-10-amd64 (recovery mode):/boot/vmlinuz-6.1.0-10-amd64:/boot/initrd.img-6.1.0-10-amd64:root=UUID=e359ad2f-1cad-445b-8ef5-103b9621d5d7 ro single

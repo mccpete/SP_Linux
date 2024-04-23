@@ -1,0 +1,708 @@
+This image was saved by Rescuezilla at 2024-03-03-2241
+Saved by 2.4.2 (64bit) 2023-03-06T000747
+The log during saving:
+----------------------------------------------------------
+
+Not processing linePersonalities : [linear] [multipath] [raid0] [raid1] [raid6] [raid5] [raid4] [raid10] 
+Not processing lineunused devices: <none>
+Saving blkdev.list. Running: lsblk -oKNAME,NAME,SIZE,TYPE,FSTYPE,MOUNTPOINT,MODEL /dev/sda 
+Updating progress bar to 0Saving blkdev.list: lsblk -oKNAME,NAME,SIZE,TYPE,FSTYPE,MOUNTPOINT,MODEL /dev/sda  returned 0: KNAME NAME    SIZE TYPE FSTYPE MOUNTPOINT MODEL
+sda   sda    50.5G disk                   VBOX HARDDISK
+sda1  |-sda1   48G part ext4              
+sda2  `-sda2  2.5G part swap              
+ 
+blkid . Running: blkid | sort -V 
+Saving blkid.list. Running: blkid 
+Saving blkid.list: blkid  returned 0: /dev/sda1: UUID="e359ad2f-1cad-445b-8ef5-103b9621d5d7" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="87e994cc-01"
+/dev/sdb1: LABEL_FATBOOT="SBLIVE" LABEL="SBLIVE" UUID="9B7C-E2AE" BLOCK_SIZE="512" TYPE="vfat" PARTUUID="5898f5f1-01"
+/dev/sr0: BLOCK_SIZE="2048" UUID="2023-03-06-02-47-04-00" LABEL="Rescuezilla" TYPE="iso9660" PTTYPE="PMBR"
+/dev/loop0: TYPE="squashfs"
+/dev/sda2: UUID="cdd83f92-2ef2-4e48-82c4-ab8632f3adf5" TYPE="swap" PARTUUID="87e994cc-02"
+ 
+Saving Info-lshw.txt. Running: lshw 
+Saving Info-lshw.txt: lshw  returned 0: ubuntu
+    description: Computer
+    product: VirtualBox
+    vendor: innotek GmbH
+    version: 1.2
+    serial: 0
+    width: 64 bits
+    capabilities: smbios-2.5 dmi-2.5 smp vsyscall32
+    configuration: family=Virtual Machine uuid=125f6e17-68a3-4dbb-b689-e446a3cb0ae6
+  *-core
+       description: Motherboard
+       product: VirtualBox
+       vendor: Oracle Corporation
+       physical id: 0
+       version: 1.2
+       serial: 0
+     *-firmware
+          description: BIOS
+          vendor: innotek GmbH
+          physical id: 0
+          version: VirtualBox
+          date: 12/01/2006
+          size: 128KiB
+          capacity: 128KiB
+          capabilities: isa pci cdboot bootselect int9keyboard int10video acpi
+     *-memory
+          description: System memory
+          physical id: 1
+          size: 5GiB
+     *-cpu
+          product: Intel(R) Core(TM) i3-7100U CPU @ 2.40GHz
+          vendor: Intel Corp.
+          physical id: 2
+          bus info: cpu@0
+          version: 6.142.9
+          width: 64 bits
+          capabilities: fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx rdtscp x86-64 constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single pti fsgsbase avx2 invpcid rdseed clflushopt md_clear flush_l1d arch_capabilities
+     *-pci
+          description: Host bridge
+          product: 440FX - 82441FX PMC [Natoma]
+          vendor: Intel Corporation
+          physical id: 100
+          bus info: pci@0000:00:00.0
+          version: 02
+          width: 32 bits
+          clock: 33MHz
+        *-isa
+             description: ISA bridge
+             product: 82371SB PIIX3 ISA [Natoma/Triton II]
+             vendor: Intel Corporation
+             physical id: 1
+             bus info: pci@0000:00:01.0
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: isa bus_master
+             configuration: latency=0
+           *-pnp00:00
+                product: PnP device PNP0303
+                physical id: 0
+                capabilities: pnp
+                configuration: driver=i8042 kbd
+           *-pnp00:01
+                product: PnP device PNP0f03
+                physical id: 1
+                capabilities: pnp
+                configuration: driver=i8042 aux
+        *-ide
+             description: IDE interface
+             product: 82371AB/EB/MB PIIX4 IDE
+             vendor: Intel Corporation
+             physical id: 1.1
+             bus info: pci@0000:00:01.1
+             logical name: scsi0
+             version: 01
+             width: 32 bits
+             clock: 33MHz
+             capabilities: ide isa_compat_mode pci_native_mode bus_master emulated
+             configuration: driver=ata_piix latency=64
+             resources: irq:0 ioport:1f0(size=8) ioport:3f6 ioport:170(size=8) ioport:376 ioport:d000(size=16)
+           *-cdrom
+                description: DVD reader
+                product: CD-ROM
+                vendor: VBOX
+                physical id: 0.1.0
+                bus info: scsi@0:0.1.0
+                logical name: /dev/cdrom
+                logical name: /dev/sr0
+                logical name: /cdrom
+                version: 1.0
+                capabilities: removable audio dvd
+                configuration: ansiversion=5 mount.fstype=iso9660 mount.options=ro,noatime,nojoliet,check=s,map=n,blocksize=2048,iocharset=utf8 state=mounted status=ready
+              *-medium
+                   physical id: 0
+                   logical name: /dev/cdrom
+                   logical name: /cdrom
+                   capabilities: gpt-1.00 partitioned partitioned:gpt
+                   configuration: guid=a53a2725-59b2-4818-b695-3be89da4824d mount.fstype=iso9660 mount.options=ro,noatime,nojoliet,check=s,map=n,blocksize=2048,iocharset=utf8 state=mounted
+                 *-volume:0 UNCLAIMED
+                      description: data partition
+                      vendor: Windows
+                      physical id: 1
+                      serial: a53a2725-59b2-4818-b694-3be89da4824d
+                      capacity: 241KiB
+                      capabilities: precious readonly
+                      configuration: name=Gap0
+                 *-volume:1 UNCLAIMED
+                      description: Windows FAT volume
+                      vendor: mkfs.fat
+                      physical id: 2
+                      version: FAT12
+                      serial: 422c-2943
+                      size: 15EiB
+                      capabilities: boot precious readonly fat initialized
+                      configuration: FATs=2 filesystem=fat name=EFI boot partition
+                 *-volume:2 UNCLAIMED
+                      description: data partition
+                      vendor: Windows
+                      physical id: 3
+                      serial: a53a2725-59b2-4818-b696-3be89da4824d
+                      capacity: 1140MiB
+                      capabilities: precious readonly
+                      configuration: name=Gap1
+        *-display
+             description: VGA compatible controller
+             product: SVGA II Adapter
+             vendor: VMware
+             physical id: 2
+             bus info: pci@0000:00:02.0
+             logical name: /dev/fb0
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: vga_controller bus_master rom fb
+             configuration: depth=32 driver=vmwgfx latency=64 resolution=2048,2048
+             resources: irq:18 ioport:d010(size=16) memory:e0000000-e0ffffff memory:f0000000-f01fffff memory:c0000-dffff
+        *-network
+             description: Ethernet interface
+             product: 82540EM Gigabit Ethernet Controller
+             vendor: Intel Corporation
+             physical id: 3
+             bus info: pci@0000:00:03.0
+             logical name: enp0s3
+             version: 02
+             serial: 08:00:27:82:e7:c8
+             size: 1Gbit/s
+             capacity: 1Gbit/s
+             width: 32 bits
+             clock: 66MHz
+             capabilities: pm pcix bus_master cap_list ethernet physical tp 10bt 10bt-fd 100bt 100bt-fd 1000bt-fd autonegotiation
+             configuration: autonegotiation=on broadcast=yes driver=e1000 driverversion=5.15.0-67-generic duplex=full ip=10.0.2.15 latency=64 link=yes mingnt=255 multicast=yes port=twisted pair speed=1Gbit/s
+             resources: irq:19 memory:f0200000-f021ffff ioport:d020(size=8)
+        *-generic
+             description: System peripheral
+             product: VirtualBox mouse integration
+             vendor: InnoTek Systemberatung GmbH
+             physical id: 4
+             bus info: pci@0000:00:04.0
+             logical name: input7
+             logical name: /dev/input/event6
+             logical name: /dev/input/js1
+             logical name: /dev/input/mouse2
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pci
+             configuration: driver=vboxguest latency=0
+             resources: irq:20 ioport:d040(size=32) memory:f0400000-f07fffff memory:f0800000-f0803fff
+        *-multimedia
+             description: Multimedia audio controller
+             product: 82801AA AC'97 Audio Controller
+             vendor: Intel Corporation
+             physical id: 5
+             bus info: pci@0000:00:05.0
+             logical name: card0
+             logical name: /dev/snd/controlC0
+             logical name: /dev/snd/pcmC0D0c
+             logical name: /dev/snd/pcmC0D0p
+             logical name: /dev/snd/pcmC0D1c
+             version: 01
+             width: 32 bits
+             clock: 33MHz
+             capabilities: bus_master
+             configuration: driver=snd_intel8x0 latency=64
+             resources: irq:21 ioport:d100(size=256) ioport:d200(size=64)
+        *-usb:0
+             description: USB controller
+             product: KeyLargo/Intrepid USB
+             vendor: Apple Inc.
+             physical id: 6
+             bus info: pci@0000:00:06.0
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: ohci bus_master cap_list
+             configuration: driver=ohci-pci latency=64
+             resources: irq:22 memory:f0804000-f0804fff
+           *-usbhost
+                product: OHCI PCI host controller
+                vendor: Linux 5.15.0-67-generic ohci_hcd
+                physical id: 1
+                bus info: usb@2
+                logical name: usb2
+                version: 5.15
+                capabilities: usb-1.10
+                configuration: driver=hub slots=12 speed=12Mbit/s
+              *-usb
+                   description: Human interface device
+                   product: VirtualBox USB Tablet
+                   vendor: VirtualBox
+                   physical id: 1
+                   bus info: usb@2:1
+                   logical name: input6
+                   logical name: /dev/input/event5
+                   logical name: /dev/input/js0
+                   logical name: /dev/input/mouse1
+                   version: 1.00
+                   capabilities: usb-1.10 usb
+                   configuration: driver=usbhid maxpower=100mA speed=12Mbit/s
+        *-bridge
+             description: Bridge
+             product: 82371AB/EB/MB PIIX4 ACPI
+             vendor: Intel Corporation
+             physical id: 7
+             bus info: pci@0000:00:07.0
+             version: 08
+             width: 32 bits
+             clock: 33MHz
+             capabilities: bridge
+             configuration: driver=piix4_smbus latency=0
+             resources: irq:9
+        *-usb:1
+             description: USB controller
+             product: 82801FB/FBM/FR/FW/FRW (ICH6 Family) USB2 EHCI Controller
+             vendor: Intel Corporation
+             physical id: b
+             bus info: pci@0000:00:0b.0
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: ehci bus_master cap_list
+             configuration: driver=ehci-pci latency=64
+             resources: irq:19 memory:f0805000-f0805fff
+           *-usbhost
+                product: EHCI Host Controller
+                vendor: Linux 5.15.0-67-generic ehci_hcd
+                physical id: 1
+                bus info: usb@1
+                logical name: usb1
+                version: 5.15
+                capabilities: usb-2.00
+                configuration: driver=hub slots=12 speed=480Mbit/s
+              *-usb
+                   description: Mass storage device
+                   product: USB 2.0 FD
+                   vendor: PNY
+                   physical id: 1
+                   bus info: usb@1:1
+                   logical name: scsi3
+                   version: 1.10
+                   serial: 071C2A9253A32830
+                   capabilities: usb-2.00 scsi emulated scsi-host
+                   configuration: driver=usb-storage maxpower=300mA speed=480Mbit/s
+                 *-disk
+                      description: SCSI Disk
+                      product: USB 2.0 FD
+                      vendor: PNY
+                      physical id: 0.0.0
+                      bus info: scsi@3:0.0.0
+                      logical name: /dev/sdb
+                      version: PMAP
+                      serial: 027813C020A0
+                      size: 28GiB (31GB)
+                      capabilities: removable
+                      configuration: ansiversion=6 logicalsectorsize=512 sectorsize=512
+                    *-medium
+                         physical id: 0
+                         logical name: /dev/sdb
+                         size: 28GiB (31GB)
+                         capabilities: partitioned partitioned:dos
+                         configuration: signature=5898f5f1
+                       *-volume
+                            description: Windows FAT volume
+                            vendor: SYSLINUX
+                            physical id: 1
+                            logical name: /dev/sdb1
+                            logical name: /mnt/backup
+                            version: FAT32
+                            serial: 9b7c-e2ae
+                            size: 28GiB
+                            capacity: 28GiB
+                            capabilities: primary bootable fat initialized
+                            configuration: FATs=2 filesystem=fat label=SBLIVE mount.fstype=vfat mount.options=rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro state=mounted
+        *-sata
+             description: SATA controller
+             product: 82801HM/HEM (ICH8M/ICH8M-E) SATA Controller [AHCI mode]
+             vendor: Intel Corporation
+             physical id: d
+             bus info: pci@0000:00:0d.0
+             logical name: scsi2
+             version: 02
+             width: 32 bits
+             clock: 33MHz
+             capabilities: sata pm ahci_1.0 bus_master cap_list emulated
+             configuration: driver=ahci latency=64
+             resources: irq:21 ioport:d240(size=8) ioport:d248(size=4) ioport:d250(size=8) ioport:d258(size=4) ioport:d260(size=16) memory:f0806000-f0807fff
+           *-disk
+                description: ATA Disk
+                product: VBOX HARDDISK
+                vendor: VirtualBox
+                physical id: 0.0.0
+                bus info: scsi@2:0.0.0
+                logical name: /dev/sda
+                version: 1.0
+                serial: VB56acd630-d9345524
+                size: 50GiB (54GB)
+                capabilities: partitioned partitioned:dos
+                configuration: ansiversion=5 logicalsectorsize=512 sectorsize=512 signature=87e994cc
+              *-volume:0
+                   description: EXT4 volume
+                   vendor: Linux
+                   physical id: 1
+                   bus info: scsi@2:0.0.0,1
+                   logical name: /dev/sda1
+                   version: 1.0
+                   serial: e359ad2f-1cad-445b-8ef5-103b9621d5d7
+                   size: 47GiB
+                   capacity: 47GiB
+                   capabilities: primary bootable journaled extended_attributes large_files huge_files dir_nlink 64bit extents ext4 ext2 initialized
+                   configuration: created=2023-09-26 17:21:38 filesystem=ext4 lastmountpoint=/ modified=2024-03-03 22:32:09 mounted=2024-03-03 22:32:17 state=clean
+              *-volume:1
+                   description: Linux swap volume
+                   physical id: 2
+                   bus info: scsi@2:0.0.0,2
+                   logical name: /dev/sda2
+                   version: 1
+                   serial: cdd83f92-2ef2-4e48-82c4-ab8632f3adf5
+                   size: 2586MiB
+                   capacity: 2586MiB
+                   capabilities: primary nofs swap initialized
+                   configuration: filesystem=swap pagesize=4096
+  *-input:0
+       product: Power Button
+       physical id: 1
+       logical name: input0
+       logical name: /dev/input/event0
+       capabilities: platform
+  *-input:1
+       product: Sleep Button
+       physical id: 2
+       logical name: input1
+       logical name: /dev/input/event1
+       capabilities: platform
+  *-input:2
+       product: AT Translated Set 2 keyboard
+       physical id: 3
+       logical name: input2
+       logical name: /dev/input/event2
+       logical name: input2::capslock
+       logical name: input2::numlock
+       logical name: input2::scrolllock
+       capabilities: i8042
+  *-input:3
+       product: Video Bus
+       physical id: 4
+       logical name: input4
+       logical name: /dev/input/event3
+       capabilities: platform
+  *-input:4
+       product: ImExPS/2 Generic Explorer Mouse
+       physical id: 5
+       logical name: input5
+       logical name: /dev/input/event4
+       logical name: /dev/input/mouse0
+       capabilities: i8042
+ 
+Saving Info-dmi.txt. Running: dmidecode 
+Saving Info-dmi.txt: dmidecode  returned 0: # dmidecode 3.3
+Getting SMBIOS data from sysfs.
+SMBIOS 2.5 present.
+10 structures occupying 450 bytes.
+Table at 0x000E1000.
+
+Handle 0x0000, DMI type 0, 20 bytes
+BIOS Information
+	Vendor: innotek GmbH
+	Version: VirtualBox
+	Release Date: 12/01/2006
+	Address: 0xE0000
+	Runtime Size: 128 kB
+	ROM Size: 128 kB
+	Characteristics:
+		ISA is supported
+		PCI is supported
+		Boot from CD is supported
+		Selectable boot is supported
+		8042 keyboard services are supported (int 9h)
+		CGA/mono video services are supported (int 10h)
+		ACPI is supported
+
+Handle 0x0001, DMI type 1, 27 bytes
+System Information
+	Manufacturer: innotek GmbH
+	Product Name: VirtualBox
+	Version: 1.2
+	Serial Number: 0
+	UUID: 176e5f12-a368-bb4d-b689-e446a3cb0ae6
+	Wake-up Type: Power Switch
+	SKU Number: Not Specified
+	Family: Virtual Machine
+
+Handle 0x0008, DMI type 2, 15 bytes
+Base Board Information
+	Manufacturer: Oracle Corporation
+	Product Name: VirtualBox
+	Version: 1.2
+	Serial Number: 0
+	Asset Tag: Not Specified
+	Features:
+		Board is a hosting board
+	Location In Chassis: Not Specified
+	Chassis Handle: 0x0003
+	Type: Motherboard
+	Contained Object Handles: 0
+
+Handle 0x0003, DMI type 3, 13 bytes
+Chassis Information
+	Manufacturer: Oracle Corporation
+	Type: Other
+	Lock: Not Present
+	Version: Not Specified
+	Serial Number: Not Specified
+	Asset Tag: Not Specified
+	Boot-up State: Safe
+	Power Supply State: Safe
+	Thermal State: Safe
+	Security Status: None
+
+Handle 0x0007, DMI type 126, 42 bytes
+Inactive
+
+Handle 0x0005, DMI type 126, 15 bytes
+Inactive
+
+Handle 0x0006, DMI type 126, 28 bytes
+Inactive
+
+Handle 0x0002, DMI type 11, 7 bytes
+OEM Strings
+	String 1: vboxVer_6.1.36
+	String 2: vboxRev_152435
+
+Handle 0x0008, DMI type 128, 8 bytes
+OEM-specific Type
+	Header and Data:
+		80 08 08 00 04 9F 24 00
+
+Handle 0xFEFF, DMI type 127, 4 bytes
+End Of Table
+
+ 
+Appending `lspci` output to Info-lspci.txt. Running: lspci 
+Appending `lspci` output to Info-lspci.txt: lspci  returned 0: 00:00.0 Host bridge: Intel Corporation 440FX - 82441FX PMC [Natoma] (rev 02)
+00:01.0 ISA bridge: Intel Corporation 82371SB PIIX3 ISA [Natoma/Triton II]
+00:01.1 IDE interface: Intel Corporation 82371AB/EB/MB PIIX4 IDE (rev 01)
+00:02.0 VGA compatible controller: VMware SVGA II Adapter
+00:03.0 Ethernet controller: Intel Corporation 82540EM Gigabit Ethernet Controller (rev 02)
+00:04.0 System peripheral: InnoTek Systemberatung GmbH VirtualBox Guest Service
+00:05.0 Multimedia audio controller: Intel Corporation 82801AA AC'97 Audio Controller (rev 01)
+00:06.0 USB controller: Apple Inc. KeyLargo/Intrepid USB
+00:07.0 Bridge: Intel Corporation 82371AB/EB/MB PIIX4 ACPI (rev 08)
+00:0b.0 USB controller: Intel Corporation 82801FB/FBM/FR/FW/FRW (ICH6 Family) USB2 EHCI Controller
+00:0d.0 SATA controller: Intel Corporation 82801HM/HEM (ICH8M/ICH8M-E) SATA Controller [AHCI mode] (rev 02)
+ 
+Appending `lspci -n` output to Info-lspci.txt. Running: lspci -n 
+Appending `lspci -n` output to Info-lspci.txt: lspci -n  returned 0: 00:00.0 0600: 8086:1237 (rev 02)
+00:01.0 0601: 8086:7000
+00:01.1 0101: 8086:7111 (rev 01)
+00:02.0 0300: 15ad:0405
+00:03.0 0200: 8086:100e (rev 02)
+00:04.0 0880: 80ee:cafe
+00:05.0 0401: 8086:2415 (rev 01)
+00:06.0 0c03: 106b:003f
+00:07.0 0680: 8086:7113 (rev 08)
+00:0b.0 0c03: 8086:265c
+00:0d.0 0106: 8086:2829 (rev 02)
+ 
+Saving Info-smart.txt. Running: smartctl --all /dev/sda 
+Saving Info-smart.txt: smartctl --all /dev/sda  returned 4: smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-67-generic] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Device Model:     VBOX HARDDISK
+Serial Number:    VB56acd630-d9345524
+Firmware Version: 1.0
+User Capacity:    54,223,962,112 bytes [54.2 GB]
+Sector Size:      512 bytes logical/physical
+Device is:        Not in smartctl database [for details use: -P showall]
+ATA Version is:   ATA/ATAPI-6 published, ANSI INCITS 361-2002
+Local Time is:    Sun Mar  3 22:41:03 2024 UTC
+SMART support is: Unavailable - device lacks SMART capability.
+
+A mandatory SMART command failed: exiting. To continue, add one or more '-T permissive' options.
+ 
+Running os-prober and appending output to Info-OS-prober.txt. Running: os-prober 
+Running os-prober and appending output to Info-OS-prober.txt: os-prober  returned 0: /dev/sda1:Debian GNU/Linux 12 (bookworm):Debian:linux
+ 
+Running linux-boot-prober for /dev/sda1. Running: linux-boot-prober /dev/sda1 
+Running linux-boot-prober for /dev/sda1: linux-boot-prober /dev/sda1  returned 0: /dev/sda1:/dev/sda1:Debian GNU/Linux:/boot/vmlinuz-6.1.0-18-amd64:/boot/initrd.img-6.1.0-18-amd64:root=UUID=e359ad2f-1cad-445b-8ef5-103b9621d5d7 ro quiet
+/dev/sda1:/dev/sda1:Debian GNU/Linux, with Linux 6.1.0-18-amd64:/boot/vmlinuz-6.1.0-18-amd64:/boot/initrd.img-6.1.0-18-amd64:root=UUID=e359ad2f-1cad-445b-8ef5-103b9621d5d7 ro quiet
+/dev/sda1:/dev/sda1:Debian GNU/Linux, with Linux 6.1.0-18-amd64 (recovery mode):/boot/vmlinuz-6.1.0-18-amd64:/boot/initrd.img-6.1.0-18-amd64:root=UUID=e359ad2f-1cad-445b-8ef5-103b9621d5d7 ro single
+/dev/sda1:/dev/sda1:Debian GNU/Linux, with Linux 6.1.0-17-amd64:/boot/vmlinuz-6.1.0-17-amd64:/boot/initrd.img-6.1.0-17-amd64:root=UUID=e359ad2f-1cad-445b-8ef5-103b9621d5d7 ro quiet
+/dev/sda1:/dev/sda1:Debian GNU/Linux, with Linux 6.1.0-17-amd64 (recovery mode):/boot/vmlinuz-6.1.0-17-amd64:/boot/initrd.img-6.1.0-17-amd64:root=UUID=e359ad2f-1cad-445b-8ef5-103b9621d5d7 ro single
+/dev/sda1:/dev/sda1:Debian GNU/Linux, with Linux 6.1.0-16-amd64:/boot/vmlinuz-6.1.0-16-amd64:/boot/initrd.img-6.1.0-16-amd64:root=UUID=e359ad2f-1cad-445b-8ef5-103b9621d5d7 ro quiet
+/dev/sda1:/dev/sda1:Debian GNU/Linux, with Linux 6.1.0-16-amd64 (recovery mode):/boot/vmlinuz-6.1.0-16-amd64:/boot/initrd.img-6.1.0-16-amd64:root=UUID=e359ad2f-1cad-445b-8ef5-103b9621d5d7 ro single
+/dev/sda1:/dev/sda1:Debian GNU/Linux, with Linux 6.1.0-15-amd64:/boot/vmlinuz-6.1.0-15-amd64:/boot/initrd.img-6.1.0-15-amd64:root=UUID=e359ad2f-1cad-445b-8ef5-103b9621d5d7 ro quiet
+/dev/sda1:/dev/sda1:Debian GNU/Linux, with Linux 6.1.0-15-amd64 (recovery mode):/boot/vmlinuz-6.1.0-15-amd64:/boot/initrd.img-6.1.0-15-amd64:root=UUID=e359ad2f-1cad-445b-8ef5-103b9621d5d7 ro single
+/dev/sda1:/dev/sda1:Debian GNU/Linux, with Linux 6.1.0-14-amd64:/boot/vmlinuz-6.1.0-14-amd64:/boot/initrd.img-6.1.0-14-amd64:root=UUID=e359ad2f-1cad-445b-8ef5-103b9621d5d7 ro quiet
+/dev/sda1:/dev/sda1:Debian GNU/Linux, with Linux 6.1.0-14-amd64 (recovery mode):/boot/vmlinuz-6.1.0-14-amd64:/boot/initrd.img-6.1.0-14-amd64:root=UUID=e359ad2f-1cad-445b-8ef5-103b9621d5d7 ro single
+/dev/sda1:/dev/sda1:Debian GNU/Linux, with Linux 6.1.0-13-amd64:/boot/vmlinuz-6.1.0-13-amd64:/boot/initrd.img-6.1.0-13-amd64:root=UUID=e359ad2f-1cad-445b-8ef5-103b9621d5d7 ro quiet
+/dev/sda1:/dev/sda1:Debian GNU/Linux, with Linux 6.1.0-13-amd64 (recovery mode):/boot/vmlinuz-6.1.0-13-amd64:/boot/initrd.img-6.1.0-13-amd64:root=UUID=e359ad2f-1cad-445b-8ef5-103b9621d5d7 ro single
+/dev/sda1:/dev/sda1:Debian GNU/Linux, with Linux 6.1.0-12-amd64:/boot/vmlinuz-6.1.0-12-amd64:/boot/initrd.img-6.1.0-12-amd64:root=UUID=e359ad2f-1cad-445b-8ef5-103b9621d5d7 ro quiet
+/dev/sda1:/dev/sda1:Debian GNU/Linux, with Linux 6.1.0-12-amd64 (recovery mode):/boot/vmlinuz-6.1.0-12-amd64:/boot/initrd.img-6.1.0-12-amd64:root=UUID=e359ad2f-1cad-445b-8ef5-103b9621d5d7 ro single
+/dev/sda1:/dev/sda1:Debian GNU/Linux, with Linux 6.1.0-10-amd64:/boot/vmlinuz-6.1.0-10-amd64:/boot/initrd.img-6.1.0-10-amd64:root=UUID=e359ad2f-1cad-445b-8ef5-103b9621d5d7 ro quiet
+/dev/sda1:/dev/sda1:Debian GNU/Linux, with Linux 6.1.0-10-amd64 (recovery mode):/boot/vmlinuz-6.1.0-10-amd64:/boot/initrd.img-6.1.0-10-amd64:root=UUID=e359ad2f-1cad-445b-8ef5-103b9621d5d7 ro single
+ 
+Running linux-boot-prober for /dev/sda2. Running: linux-boot-prober /dev/sda2 
+Running linux-boot-prober for /dev/sda2: linux-boot-prober /dev/sda2  returned 0:  
+Saving /mnt/backup/2024-03-03-2240-img-rescuezilla-SPOS/sda-pt.parted.compact. Running: parted --script /dev/sda unit compact print 
+Saving /mnt/backup/2024-03-03-2240-img-rescuezilla-SPOS/sda-pt.parted.compact: parted --script /dev/sda unit compact print  returned 0: Model: ATA VBOX HARDDISK (scsi)
+Disk /dev/sda: 54.2GB
+Sector size (logical/physical): 512B/512B
+Partition Table: msdos
+Disk Flags: 
+
+Number  Start   End     Size    Type     File system     Flags
+ 1      1049kB  51.5GB  51.5GB  primary  ext4            boot
+ 2      51.5GB  54.2GB  2712MB  primary  linux-swap(v1)
+
+ 
+Saving /mnt/backup/2024-03-03-2240-img-rescuezilla-SPOS/sda-pt.parted. Running: parted --script /dev/sda unit s print 
+Saving /mnt/backup/2024-03-03-2240-img-rescuezilla-SPOS/sda-pt.parted: parted --script /dev/sda unit s print  returned 0: Model: ATA VBOX HARDDISK (scsi)
+Disk /dev/sda: 105906176s
+Sector size (logical/physical): 512B/512B
+Partition Table: msdos
+Disk Flags: 
+
+Number  Start       End         Size        Type     File system     Flags
+ 1      2048s       100610047s  100608000s  primary  ext4            boot
+ 2      100610048s  105906175s  5296128s    primary  linux-swap(v1)
+
+ 
+Saving /mnt/backup/2024-03-03-2240-img-rescuezilla-SPOS/sda-mbr. Running: dd if=/dev/sda of=/mnt/backup/2024-03-03-2240-img-rescuezilla-SPOS/sda-mbr bs=512 count=1 
+Saving /mnt/backup/2024-03-03-2240-img-rescuezilla-SPOS/sda-mbr: dd if=/dev/sda of=/mnt/backup/2024-03-03-2240-img-rescuezilla-SPOS/sda-mbr bs=512 count=1  returned 0:  1+0 records in
+1+0 records out
+512 bytes copied, 0.000493328 s, 1.0 MB/s
+
+lowest [('/dev/sda1', 1048576), ('/dev/sda2', 51512344576)]
+Detected first partition is /dev/sda1 at byte offset 1048576
+Saving /mnt/backup/2024-03-03-2240-img-rescuezilla-SPOS/sda-hidden-data-after-mbr. Running: dd if=/dev/sda of=/mnt/backup/2024-03-03-2240-img-rescuezilla-SPOS/sda-hidden-data-after-mbr skip=1 bs=512 count=2047 
+Saving /mnt/backup/2024-03-03-2240-img-rescuezilla-SPOS/sda-hidden-data-after-mbr: dd if=/dev/sda of=/mnt/backup/2024-03-03-2240-img-rescuezilla-SPOS/sda-hidden-data-after-mbr skip=1 bs=512 count=2047  returned 0:  2047+0 records in
+2047+0 records out
+1048064 bytes (1.0 MB, 1.0 MiB) copied, 0.0333083 s, 31.5 MB/s
+
+Saving /mnt/backup/2024-03-03-2240-img-rescuezilla-SPOS/sda-pt.sf. Running: sfdisk --dump /dev/sda 
+Saving /mnt/backup/2024-03-03-2240-img-rescuezilla-SPOS/sda-pt.sf: sfdisk --dump /dev/sda  returned 0: label: dos
+label-id: 0x87e994cc
+device: /dev/sda
+unit: sectors
+sector-size: 512
+
+/dev/sda1 : start=        2048, size=   100608000, type=83, bootable
+/dev/sda2 : start=   100610048, size=     5296128, type=82
+ 
+Retreiving disk geometry with sfdisk . Running: sfdisk --show-geometry /dev/sda 
+Retreiving disk geometry with sfdisk : sfdisk --show-geometry /dev/sda  returned 0: /dev/sda: 6592 cylinders, 255 heads, 2 sectors/track
+ 
+cylinders=6592heads=255sectors=2Querying device-mapper kernel module (dm_mod).. Running: modinfo dm_mod 
+Querying device-mapper kernel module (dm_mod).: modinfo dm_mod  returned 0: name:           dm_mod
+filename:       (builtin)
+license:        GPL
+file:           drivers/md/dm-mod
+author:         Joe Thornber <dm-devel@redhat.com>
+description:    device-mapper driver
+alias:          devname:mapper/control
+alias:          char-major-10-236
+parm:           reserved_rq_based_ios:Reserved IOs in request-based mempools (uint)
+parm:           use_blk_mq:Use block multiqueue for request-based DM devices (bool)
+parm:           dm_mq_nr_hw_queues:Number of hardware queues for request-based dm-mq devices (uint)
+parm:           dm_mq_queue_depth:Queue depth for request-based dm-mq devices (uint)
+parm:           stats_current_allocated_bytes:Memory currently used by statistics (ulong)
+parm:           kcopyd_subjob_size_kb:Sub-job size for dm-kcopyd clients (uint)
+parm:           major:The major number of the device mapper (uint)
+parm:           reserved_bio_based_ios:Reserved IOs in bio-based mempools (uint)
+parm:           dm_numa_node:NUMA node for DM device memory allocations (int)
+parm:           swap_bios:Maximum allowed inflight swap IOs (int)
+parm:           create:Create a mapped device in early boot (charp)
+ 
+Search all volume groups (VGs). Running: vgscan 
+Search all volume groups (VGs): vgscan  returned 0:  
+Activate all logical volumes (LVs). Running: vgchange --activate y 
+Activate all logical volumes (LVs): vgchange --activate y  returned 0:  
+Volume Group (VG) query. Running: vgs -o vg_all,pv_all --reportformat json 
+Volume Group (VG) query: vgs -o vg_all,pv_all --reportformat json  returned 0:   {
+      "report": [
+          {
+              "vg": [
+              ]
+          }
+      ]
+  }
+ 
+Volume group query. return code: 0 stdout:   {
+      "report": [
+          {
+              "vg": [
+              ]
+          }
+      ]
+  }
+. stderr=
+Logical Volume (LV) query. Running: lvs -o lv_all,vg_all --reportformat json 
+Logical Volume (LV) query: lvs -o lv_all,vg_all --reportformat json  returned 0:   {
+      "report": [
+          {
+              "lv": [
+              ]
+          }
+      ]
+  }
+ 
+umount. Running: umount /dev/sda1 
+Updating progress bar to 0.0umount: umount /dev/sda1  returned 32:  umount: /dev/sda1: not mounted.
+
+
+findmnt. Running: findmnt --raw --noheadings --output SOURCE /dev/sda1 
+findmnt: findmnt --raw --noheadings --output SOURCE /dev/sda1  returned 1:  
+
+Backup /dev/sda1 containing filesystem ext4 to /mnt/backup/2024-03-03-2240-img-rescuezilla-SPOS/sda1.ext4-ptcl-img.gz.Running . Running: partclone.ext4 --logfile /var/log/partclone.log --clone --source /dev/sda1 --output - | pigz --stdout -6 | split --suffix-length=2 --bytes=4GB - /mnt/backup/2024-03-03-2240-img-rescuezilla-SPOS/sda1.ext4-ptcl-img.gz. 
+Not yet interpreting partclone output: Partclone v0.3.20 http://partclone.org
+
+Not yet interpreting partclone output: Starting to clone device (/dev/sda1) to image (-)
+
+Not yet interpreting partclone output: Reading Super Block
+
+Not yet interpreting partclone output: Elapsed: 00:00:01, Remaining: 00:01:39, Completed:   1.00%
+
+Not yet interpreting partclone output: Elapsed: 00:00:01, Remaining: 00:00:00, Completed: 100.00%
+
+Not yet interpreting partclone output: Total Time: 00:00:01, 100.00% completed!
+
+Not yet interpreting partclone output: File system:  EXTFS
+
+Updating progress bar to 0.009499912977896386Updating progress bar to 0.005224952137843012Updating progress bar to 0.009309914718338459Updating progress bar to 0.012254887741486337Updating progress bar to 0.015484858153971107Updating progress bar to 0.018714828566455878Updating progress bar to 0.022134797238498576Updating progress bar to 0.026979752857225734Updating progress bar to 0.03220470499506875Updating progress bar to 0.0352446771479956Updating progress bar to 0.038949643209375176Updating progress bar to 0.04189461623252306Updating progress bar to 0.045409584034344724Updating progress bar to 0.04825955792771364Updating progress bar to 0.051869524859314266Updating progress bar to 0.05481449788246214Updating progress bar to 0.056999477867378315Updating progress bar to 0.06022944827986309Updating progress bar to 0.06279442478389512Updating progress bar to 0.06554939954748507Updating progress bar to 0.06697438649416951Updating progress bar to 0.06801937692173812Updating progress bar to 0.07029935603643327Updating progress bar to 0.07058435342577014Updating progress bar to 0.07124934733422289Updating progress bar to 0.07295933167024424Updating progress bar to 0.07447931774670767Updating progress bar to 0.07628430121250797Updating progress bar to 0.07694929512096073Updating progress bar to 0.07770928815919242Updating progress bar to 0.07913427510587688Updating progress bar to 0.08103425770145616Updating progress bar to 0.08369423333526717Updating progress bar to 0.08521421941173057Updating progress bar to 0.08844418982421536Updating progress bar to 0.09271915066426871Updating progress bar to 0.09604412020653245Updating progress bar to 0.09898909322968033Updating progress bar to 0.10183906712304926Updating progress bar to 0.10421404536752336Updating progress bar to 0.10658902361199746Updating progress bar to 0.10905900098625051Updating progress bar to 0.11133898010094566Updating progress bar to 0.1138089574751987Updating progress bar to 0.11494894703254627Updating progress bar to 0.11542394268144109Updating progress bar to 0.11599393746011488Updating progress bar to 0.11684892962812556Updating progress bar to 0.11789392005569416Updating progress bar to 0.11827391657481Updating progress bar to 0.11865391309392585Updating progress bar to 0.11941390613215758Updating progress bar to 0.12064889481928409Updating progress bar to 0.12169388524685269Updating progress bar to 0.12292887393397922Updating progress bar to 0.12577884782734813Updating progress bar to 0.12815382607182224Updating progress bar to 0.13062380344607533Updating progress bar to 0.13233378778209665Updating progress bar to 0.1329987816905494Updating progress bar to 0.13318877995010733Updating progress bar to 0.13337877820966526Updating progress bar to 0.13442376863723388Updating progress bar to 0.13575375645413934Updating progress bar to 0.13793873643905552Updating progress bar to 0.13869872947728723Updating progress bar to 0.13945872251551894Updating progress bar to 0.14040871381330858Updating progress bar to 0.14154870337065614Updating progress bar to 0.14211869814932993Updating progress bar to 0.14249869466844578Updating progress bar to 0.1432586877066775Updating progress bar to 0.1443036781342461Updating progress bar to 0.14506367117247781Updating progress bar to 0.14715365202761502Updating progress bar to 0.14791364506584673Updating progress bar to 0.14952863027208912Updating progress bar to 0.15028862331032083Updating progress bar to 0.15123861460811047Updating progress bar to 0.15161861112722633Updating progress bar to 0.15266360155479494Updating progress bar to 0.15370859198236353Updating progress bar to 0.15475358240993212Updating progress bar to 0.15551357544816385Updating progress bar to 0.1560835702268376Updating progress bar to 0.15703356152462725Updating progress bar to 0.15826855021175376Updating progress bar to 0.15921854150954345Updating progress bar to 0.1600735336775541Updating progress bar to 0.16083352671578582Updating progress bar to 0.1620685154029123Updating progress bar to 0.16263851018158615Updating progress bar to 0.1634935023495968Updating progress bar to 0.16463349190694435Updating progress bar to 0.16539348494517608Updating progress bar to 0.16605847885362884Updating progress bar to 0.16691347102163948Updating progress bar to 0.16738846667053434Updating progress bar to 0.1676734640598712Updating progress bar to 0.168243458838545Updating progress bar to 0.1690984510065557Updating progress bar to 0.16985844404478737Updating progress bar to 0.17052343795324013Updating progress bar to 0.1710934327319139Updating progress bar to 0.17137843012125079Updating progress bar to 0.17194842489992462Updating progress bar to 0.17251841967859838Updating progress bar to 0.17327841271683006Updating progress bar to 0.1740384057550618Updating progress bar to 0.17489339792307246Updating progress bar to 0.17593838835064107Updating progress bar to 0.1768883796484307Updating progress bar to 0.17783837094622032Updating progress bar to 0.17897836050356794Updating progress bar to 0.18021334919069443Updating progress bar to 0.18125833961826301Updating progress bar to 0.18192333352671575Updating progress bar to 0.1831583222138423Updating progress bar to 0.18363331786273712Updating progress bar to 0.18410831351163193Updating progress bar to 0.18458330916052676Updating progress bar to 0.18496330567964261Updating progress bar to 0.1855333004583164Updating progress bar to 0.1863882926263271Updating progress bar to 0.18705328653477987Updating progress bar to 0.18781327957301153Updating progress bar to 0.18866827174102221Updating progress bar to 0.18942826477925395Updating progress bar to 0.1899982595579277Updating progress bar to 0.19094825085571734Updating progress bar to 0.19170824389394908Updating progress bar to 0.194463218657539Updating progress bar to 0.19484321517665487Updating progress bar to 0.19503321343621283Updating progress bar to 0.19503321343621283Updating progress bar to 0.19541320995532863Updating progress bar to 0.1957932064744445Updating progress bar to 0.1982631838486976Updating progress bar to 0.20092315948250855Updating progress bar to 0.20348813598654059Updating progress bar to 0.20643310900968845Updating progress bar to 0.20747809943725706Updating progress bar to 0.20766809769681496Updating progress bar to 0.20795309508615192Updating progress bar to 0.20909308464349946Updating progress bar to 0.21175306027731042Updating progress bar to 0.21479303243023729Updating progress bar to 0.21773800545338517Updating progress bar to 0.2188779950107327Updating progress bar to 0.21982798630852235Updating progress bar to 0.22087297673609096Updating progress bar to 0.22296295759122814Updating progress bar to 0.22410294714857573Updating progress bar to 0.22505293844636537Updating progress bar to 0.22524293670592332Updating progress bar to 0.22543293496548125Updating progress bar to 0.22543293496548125Updating progress bar to 0.22571793235481813Updating progress bar to 0.22590793061437608Updating progress bar to 0.22647792539304984Updating progress bar to 0.22723791843128155Updating progress bar to 0.22780791320995536Updating progress bar to 0.22837790798862911Updating progress bar to 0.22885290363752392Updating progress bar to 0.2294228984161977Updating progress bar to 0.23037288971398737Updating progress bar to 0.23113288275221905Updating progress bar to 0.23303286534779835Updating progress bar to 0.23502784707315658Updating progress bar to 0.23768782270696756Updating progress bar to 0.24053779660033647Updating progress bar to 0.24300777397458953Updating progress bar to 0.24424276266171607Updating progress bar to 0.24709273655508499Updating progress bar to 0.25051270522712765Updating progress bar to 0.25212769043337Updating progress bar to 0.25478766606718106Updating progress bar to 0.25640265127342343Updating progress bar to 0.25830263386900276Updating progress bar to 0.2604876138539189Updating progress bar to 0.262767592968614Updating progress bar to 0.2649525729535302Updating progress bar to 0.26628256077043566Updating progress bar to 0.26799254510645704Updating progress bar to 0.2694175320531415Updating progress bar to 0.2716975111678367Updating progress bar to 0.27350249463363696Updating progress bar to 0.27549747635899513Updating progress bar to 0.27768245634391137Updating progress bar to 0.27910744329059584Updating progress bar to 0.28138742240529097Updating progress bar to 0.28319240587109124Updating progress bar to 0.2857573823751232Updating progress bar to 0.2876573649707026Updating progress bar to 0.29060233799385043Updating progress bar to 0.29231232232987175Updating progress bar to 0.29449730231478793Updating progress bar to 0.2974422753379358Updating progress bar to 0.29905726054417825Updating progress bar to 0.30143223878865233Updating progress bar to 0.30428221268202127Updating progress bar to 0.3062771944073795Updating progress bar to 0.3084621743922956Updating progress bar to 0.310172158728317Updating progress bar to 0.31349712827058074Updating progress bar to 0.31482711608748626Updating progress bar to 0.3178670882404131Updating progress bar to 0.3193870743168765Updating progress bar to 0.3212870569124558Updating progress bar to 0.3224270464698033Updating progress bar to 0.3229970412484771Updating progress bar to 0.3242320299356037Updating progress bar to 0.3256570168822881Updating progress bar to 0.32632201079074086Updating progress bar to 0.32945698207344665Updating progress bar to 0.3308819690201311Updating progress bar to 0.33316194813482625Updating progress bar to 0.3341119394326159Updating progress bar to 0.33677191506642695Updating progress bar to 0.3380069037535534Updating progress bar to 0.33886189592156407Updating progress bar to 0.33971688808957473Updating progress bar to 0.3407618785171433Updating progress bar to 0.34171186981493296Updating progress bar to 0.34275686024250157Updating progress bar to 0.34370685154029124Updating progress bar to 0.34541683587631256Updating progress bar to 0.3466518245634391Updating progress bar to 0.35016679236526077Updating progress bar to 0.3519717758310611Updating progress bar to 0.3545367523350931Updating progress bar to 0.3558667401519986Updating progress bar to 0.35776672274757787Updating progress bar to 0.3603316992516099Updating progress bar to 0.36251667923652603Updating progress bar to 0.3636566687938737Updating progress bar to 0.3640366653129895Updating progress bar to 0.3643216627023264Updating progress bar to 0.3645116609618843Updating progress bar to 0.36470165922144226Updating progress bar to 0.36489165748100016Updating progress bar to 0.36508165574055806Updating progress bar to 0.365271654000116Updating progress bar to 0.365461652259674Updating progress bar to 0.36565165051923193Updating progress bar to 0.3660316470383478Updating progress bar to 0.3664116435574636Updating progress bar to 0.36688663920635844Updating progress bar to 0.36736163485525325Updating progress bar to 0.367931629633927Updating progress bar to 0.36850162441260076Updating progress bar to 0.36907161919127457Updating progress bar to 0.3696416139699483Updating progress bar to 0.3703066078784011Updating progress bar to 0.3709716017868538Updating progress bar to 0.3715415965655276Updating progress bar to 0.3723015896037593Updating progress bar to 0.37296658351221207Updating progress bar to 0.37363157742066483Updating progress bar to 0.37429657132911753Updating progress bar to 0.37496156523757035Updating progress bar to 0.375721558275802Updating progress bar to 0.37629155305447587Updating progress bar to 0.3769565469629286Updating progress bar to 0.37762154087138133Updating progress bar to 0.37819153565005514Updating progress bar to 0.37895152868828685Updating progress bar to 0.3796165225967396Updating progress bar to 0.3802815165051923Updating progress bar to 0.3809465104136451Updating progress bar to 0.38161150432209784Updating progress bar to 0.3822764982305506Updating progress bar to 0.38294149213900336Updating progress bar to 0.38370148517723496Updating progress bar to 0.3842714799559088Updating progress bar to 0.3849364738643616Updating progress bar to 0.38560146777281434Updating progress bar to 0.386361460811046Updating progress bar to 0.3867414573301619Updating progress bar to 0.3867414573301619Updating progress bar to 0.38731145210883566Updating progress bar to 0.3881664442768464Updating progress bar to 0.389116435574636Updating progress bar to 0.38987642861286764Updating progress bar to 0.3903514242617625Updating progress bar to 0.3906364216510993Updating progress bar to 0.39082641991065725Updating progress bar to 0.3916814120786679Updating progress bar to 0.3923464059871207Updating progress bar to 0.3932013981551314Updating progress bar to 0.39396139119336315Updating progress bar to 0.3954813772698265Updating progress bar to 0.3979513546440796Updating progress bar to 0.3998513372396589Updating progress bar to 0.40279631026280677Updating progress bar to 0.4052662876370598Updating progress bar to 0.40878125543888144Updating progress bar to 0.41182122759180834Updating progress bar to 0.41609618843186164Updating progress bar to 0.4183761675465569Updating progress bar to 0.42018115101235715Updating progress bar to 0.42151113882926267Updating progress bar to 0.42265112838661023Updating progress bar to 0.42360111968439984Updating progress bar to 0.42464611011196846Updating progress bar to 0.425976097928874Updating progress bar to 0.42692608922666353Updating progress bar to 0.428446075303127Updating progress bar to 0.4301560596391484Updating progress bar to 0.43110605093693805Updating progress bar to 0.4323410396240645Updating progress bar to 0.4335760283111911Updating progress bar to 0.43500101525787543Updating progress bar to 0.4366160004641179Updating progress bar to 0.4377559900214654Updating progress bar to 0.43899097870859205Updating progress bar to 0.43956097348726586Updating progress bar to 0.44013096826593956Updating progress bar to 0.44013096826593956Updating progress bar to 0.4407959621743923Updating progress bar to 0.4412709578232871Updating progress bar to 0.441650954342403Updating progress bar to 0.4424109473806347Updating progress bar to 0.4437409351975402Updating progress bar to 0.4446909264953299Updating progress bar to 0.44668590822068804Updating progress bar to 0.4488708882056042Updating progress bar to 0.4510558681905203Updating progress bar to 0.452100858618089Updating progress bar to 0.45476083425189995Updating progress bar to 0.4559958229390265Updating progress bar to 0.4576108081452689Updating progress bar to 0.4595107907408481Updating progress bar to 0.4616007715959854Updating progress bar to 0.46350075419156467Updating progress bar to 0.4654957359169229Updating progress bar to 0.46654072634449145Updating progress bar to 0.4676807159018391Updating progress bar to 0.46958069849741835Updating progress bar to 0.47129068283343967Updating progress bar to 0.47214567500145044Updating progress bar to 0.4730006671694611Updating progress bar to 0.47366566107791375Updating progress bar to 0.47442565411614546Updating progress bar to 0.47528064628415617Updating progress bar to 0.4766106341010617Updating progress bar to 0.4787006149561989Updating progress bar to 0.48079059581133604Updating progress bar to 0.4817405871091257Updating progress bar to 0.4823105818877995Updating progress bar to 0.48288057666647327Updating progress bar to 0.48354557057492603Updating progress bar to 0.48411556535359984Updating progress bar to 0.48478055926205255Updating progress bar to 0.4857305505598422Updating progress bar to 0.4866805418576318Updating progress bar to 0.48725053663630563Updating progress bar to 0.48791553054475834Updating progress bar to 0.48867552358299005Updating progress bar to 0.48953051575100076Updating progress bar to 0.4905755061785693Updating progress bar to 0.4910505018274642Updating progress bar to 0.4916204966061379Updating progress bar to 0.4922854905145907Updating progress bar to 0.49418547311016997Updating progress bar to 0.49570545918663345Updating progress bar to 0.4979854383013286Updating progress bar to 0.5007404130649186Updating progress bar to 0.5026403956604978Updating progress bar to 0.5058703660729825Updating progress bar to 0.5078653477983408Updating progress bar to 0.50976533039392Updating progress bar to 0.5112853164703834Updating progress bar to 0.5142302894935313Updating progress bar to 0.5163202703486686Updating progress bar to 0.5189802459824795Updating progress bar to 0.5217352207460695Updating progress bar to 0.5244901955096595Updating progress bar to 0.5263901781052386Updating progress bar to 0.5273401694030283Updating progress bar to 0.5281001624412601Updating progress bar to 0.5291451528688288Updating progress bar to 0.5303801415559553Updating progress bar to 0.5331351163195451Updating progress bar to 0.5350350989151245Updating progress bar to 0.5359850902129141Updating progress bar to 0.5376000754191566Updating progress bar to 0.5387400649765041Updating progress bar to 0.5400700527934095Updating progress bar to 0.5435850205952312Updating progress bar to 0.5456750014503684Updating progress bar to 0.5486199744735163Updating progress bar to 0.549474966641527Updating progress bar to 0.5520399431455589Updating progress bar to 0.5553649126878227Updating progress bar to 0.5580248883216338Updating progress bar to 0.559829871787434Updating progress bar to 0.5608748622150026Updating progress bar to 0.5611598596043396Updating progress bar to 0.5619198526425712Updating progress bar to 0.5625848465510239Updating progress bar to 0.5635348378488135Updating progress bar to 0.5643898300168242Updating progress bar to 0.5657198178337297Updating progress bar to 0.5671448047804142Updating progress bar to 0.5683797934675406Updating progress bar to 0.5701847769333411Updating progress bar to 0.5726547543075942Updating progress bar to 0.5749347334222894Updating progress bar to 0.5767397168880896Updating progress bar to 0.5786396994836688Updating progress bar to 0.5803496838196902Updating progress bar to 0.5818696698961537Updating progress bar to 0.5826296629343853Updating progress bar to 0.5840546498810698Updating progress bar to 0.5853846376979752Updating progress bar to 0.5864296281255439Updating progress bar to 0.5875696176828915Updating progress bar to 0.5886146081104601Updating progress bar to 0.5894696002784706Updating progress bar to 0.5903245924464814Updating progress bar to 0.5912745837442711Updating progress bar to 0.5922245750420607Updating progress bar to 0.5933645645994083Updating progress bar to 0.5941245576376399Updating progress bar to 0.5955495445843244Updating progress bar to 0.5971645297905669Updating progress bar to 0.5981145210883565Updating progress bar to 0.5991595115159251Updating progress bar to 0.6002995010732727Updating progress bar to 0.6014394906306202Updating progress bar to 0.6021994836688519Updating progress bar to 0.6032444740964205Updating progress bar to 0.6039094680048732Updating progress bar to 0.6050494575622208Updating progress bar to 0.6059994488600104Updating progress bar to 0.607139438417358Updating progress bar to 0.6077094331960318Updating progress bar to 0.6086594244938214Updating progress bar to 0.6091344201427162Updating progress bar to 0.6100844114405058Updating progress bar to 0.6107494053489587Updating progress bar to 0.6114143992574114Updating progress bar to 0.6121743922956431Updating progress bar to 0.6146443696698961Updating progress bar to 0.6169243487845912Updating progress bar to 0.6193943261588444Updating progress bar to 0.6216743052735394Updating progress bar to 0.6236692869988978Updating progress bar to 0.625474270464698Updating progress bar to 0.6283242443580669Updating progress bar to 0.6314592156407727Updating progress bar to 0.6341191912745837Updating progress bar to 0.6366841677786157Updating progress bar to 0.6395341416719846Updating progress bar to 0.6422891164355746Updating progress bar to 0.6447590938098278Updating progress bar to 0.6477040668329757Updating progress bar to 0.6502690433370076Updating progress bar to 0.6528340198410397Updating progress bar to 0.6546390033068399Updating progress bar to 0.6561589893833033Updating progress bar to 0.656728984161977Updating progress bar to 0.6571089806810929Updating progress bar to 0.6578689737193247Updating progress bar to 0.6589139641468933Updating progress bar to 0.6600539537042409Updating progress bar to 0.6610989441318095Updating progress bar to 0.662143934559378Updating progress bar to 0.6632839241167255Updating progress bar to 0.664898909322968Updating progress bar to 0.6669888901781053Updating progress bar to 0.6695538666821373Updating progress bar to 0.6706938562394849Updating progress bar to 0.6724038405755061Updating progress bar to 0.6743038231710855Updating progress bar to 0.6762038057666648Updating progress bar to 0.6775337935835701Updating progress bar to 0.6798137726982654Updating progress bar to 0.6814287579045079Updating progress bar to 0.6828537448511922Updating progress bar to 0.6840887335383189Updating progress bar to 0.6856087196147821Updating progress bar to 0.6879836978592563Updating progress bar to 0.6899786795846145Updating progress bar to 0.6918786621801937Updating progress bar to 0.6943486395544468Updating progress bar to 0.696438620409584Updating progress bar to 0.6978636073562685Updating progress bar to 0.6996685908220688Updating progress bar to 0.7017585716772061Updating progress bar to 0.7035635551430063Updating progress bar to 0.7068885246852701Updating progress bar to 0.7100234959679758Updating progress bar to 0.7110684863955444Updating progress bar to 0.712113476823113Updating progress bar to 0.7131584672506817Updating progress bar to 0.7143934559378082Updating progress bar to 0.7159134420142718Updating progress bar to 0.717433428090735Updating progress bar to 0.7210433950223357Updating progress bar to 0.7225633810987993Updating progress bar to 0.7256033532517259Updating progress bar to 0.728073330625979Updating progress bar to 0.730353309740674Updating progress bar to 0.7326332888553692Updating progress bar to 0.7364332540465277Updating progress bar to 0.7388082322910019Updating progress bar to 0.741278209665255Updating progress bar to 0.7427031966119395Updating progress bar to 0.7450781748564136Updating progress bar to 0.7476431513604456Updating progress bar to 0.7493531356964668Updating progress bar to 0.751633114811162Updating progress bar to 0.7541980913151941Updating progress bar to 0.7569530660787841Updating progress bar to 0.7590430469339212Updating progress bar to 0.7618930208272902Updating progress bar to 0.7641729999419853Updating progress bar to 0.7670229738353541Updating progress bar to 0.7693029529500494Updating progress bar to 0.772532923362534Updating progress bar to 0.7744329059581133Updating progress bar to 0.7772828798514823Updating progress bar to 0.7798478563555143Updating progress bar to 0.7824128328595463Updating progress bar to 0.7828878285084411Updating progress bar to 0.7837428206764518Updating progress bar to 0.78573780240181Updating progress bar to 0.7889677728142949Updating progress bar to 0.790772756280095Updating progress bar to 0.7918177467076636Updating progress bar to 0.7927677380054534Updating progress bar to 0.793812728433022Updating progress bar to 0.7950477171201485Updating progress bar to 0.7954277136392645Updating progress bar to 0.7974226953646225Updating progress bar to 0.7999876718686546Updating progress bar to 0.8014126588153391Updating progress bar to 0.8038826361895922Updating progress bar to 0.8059726170447294Updating progress bar to 0.8079675987700875Updating progress bar to 0.8092025874572142Updating progress bar to 0.8100575796252247Updating progress bar to 0.8111025700527935Updating progress bar to 0.8128125543888147Updating progress bar to 0.8135725474270465Updating progress bar to 0.8143325404652781Updating progress bar to 0.8149975343737311Updating progress bar to 0.8156625282821837Updating progress bar to 0.8163275221906364Updating progress bar to 0.8170875152288682Updating progress bar to 0.8177525091373209Updating progress bar to 0.8193674943435633Updating progress bar to 0.8214574751987006Updating progress bar to 0.8231674595347218Updating progress bar to 0.8246874456111852Updating progress bar to 0.8271574229854383Updating progress bar to 0.8288674073214597Updating progress bar to 0.8311473864361547Updating progress bar to 0.8327623716423972Updating progress bar to 0.8341873585890816Updating progress bar to 0.8367523350931138Updating progress bar to 0.8393173115971456Updating progress bar to 0.8410272959331669Updating progress bar to 0.8422622846202935Updating progress bar to 0.8430222776585253Updating progress bar to 0.8433072750478621Updating progress bar to 0.8440672680860939Updating progress bar to 0.8448272611243256Updating progress bar to 0.8453022567732205Updating progress bar to 0.8462522480710101Updating progress bar to 0.8475822358879155Updating progress bar to 0.8490072228346001Updating progress bar to 0.8504322097812844Updating progress bar to 0.8535671810639902Updating progress bar to 0.85451717236178Updating progress bar to 0.856797151476475Updating progress bar to 0.8588871323316122Updating progress bar to 0.8608821140569705Updating progress bar to 0.8631620931716656Updating progress bar to 0.8651570748970238Updating progress bar to 0.8667720601032662Updating progress bar to 0.8689570400881823Updating progress bar to 0.8707620235539827Updating progress bar to 0.8728520044091198Updating progress bar to 0.8740869930962464Updating progress bar to 0.8753219817833731Updating progress bar to 0.8771269652491733Updating progress bar to 0.8779819574171841Updating progress bar to 0.8789319487149736Updating progress bar to 0.8802619365318791Updating progress bar to 0.8857718860590589Updating progress bar to 0.8957467946858503Updating progress bar to 0.8995467598770088Updating progress bar to 0.9021117363810406Updating progress bar to 0.904296716365957Updating progress bar to 0.9061016998317571Updating progress bar to 0.9080966815571155Updating progress bar to 0.9099966641526949Updating progress bar to 0.9124666415269479Updating progress bar to 0.9154116145500957Updating progress bar to 0.9182615884434646Updating progress bar to 0.919971572779486Updating progress bar to 0.9216815571155073Updating progress bar to 0.9236765388408656Updating progress bar to 0.925481522306666Updating progress bar to 0.9274765040320241Updating progress bar to 0.9290914892382666Updating progress bar to 0.9313714683529617Updating progress bar to 0.9335564483378778Updating progress bar to 0.9385914022161629Updating progress bar to 0.948661309972733Updating progress bar to 0.9499912977896385Not yet interpreting partclone output: Total Time: 00:20:28, Ave. Rate:  754.5MB/min, 100.00% completed!
+
+Not yet interpreting partclone output: Syncing... OK!
+
+Not yet interpreting partclone output: Partclone successfully cloned the device (/dev/sda1) to the image (-)
+
+Exit output stderr umount. Running: umount /dev/sda2 
+Updating progress bar to 0.9499912977896385umount: umount /dev/sda2  returned 32:  umount: /dev/sda2: not mounted.
+
+
+findmnt. Running: findmnt --raw --noheadings --output SOURCE /dev/sda2 
+findmnt: findmnt --raw --noheadings --output SOURCE /dev/sda2  returned 1:  
+
+Shutdown PC. Running: shutdown 
+Shutdown PC: shutdown  returned 0:  Shutdown scheduled for Sun 2024-03-03 23:02:38 UTC, use 'shutdown -c' to cancel.
+
+
+Populating summary page with:
+
+Backup saved successfully.
+
+Successful backup of partition /dev/sda1
+Successful backup of swap partition /dev/sda2
+
+
+
+Operation took 20.3 minutes.
+
+Shutdown scheduled for Sun 2024-03-03 23:02:38 UTC, use 'shutdown -c' to cancel.
+Closing the logfile /mnt/backup/2024-03-03-2240-img-rescuezilla-SPOS/clonezilla-img and generating a tag file for this image: /mnt/backup/2024-03-03-2240-img-rescuezilla-SPOS/Info-img-id.txtChecksumming clonezilla-img file. Running: sha512sum /mnt/backup/2024-03-03-2240-img-rescuezilla-SPOS/clonezilla-img 
+Checksumming clonezilla-img file: sha512sum /mnt/backup/2024-03-03-2240-img-rescuezilla-SPOS/clonezilla-img  returned 0: 3e268081fb69dafe6c842665420221f12e0d42f7da406ff8bbdd56dcc2ccc2518ae24fc58840da6857870726277fb88143469717a2f45d172621bb69f78a754d  /mnt/backup/2024-03-03-2240-img-rescuezilla-SPOS/clonezilla-img
+ 
+

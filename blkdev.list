@@ -1,0 +1,4 @@
+KNAME NAME    SIZE TYPE FSTYPE MOUNTPOINT MODEL
+sda   sda    50.5G disk                   VBOX HARDDISK
+sda1  |-sda1   48G part ext4              
+sda2  `-sda2  2.5G part swap              

@@ -1,0 +1,18 @@
+This image was saved from this machine with hard drive S.M.A.R.T. info at 2024-03-03-2241
+*****************************************************.
+For the drive: /dev/sda
+smartctl 7.2 2020-12-30 r5155 [x86_64-linux-5.15.0-67-generic] (local build)
+Copyright (C) 2002-20, Bruce Allen, Christian Franke, www.smartmontools.org
+
+=== START OF INFORMATION SECTION ===
+Device Model:     VBOX HARDDISK
+Serial Number:    VB56acd630-d9345524
+Firmware Version: 1.0
+User Capacity:    54,223,962,112 bytes [54.2 GB]
+Sector Size:      512 bytes logical/physical
+Device is:        Not in smartctl database [for details use: -P showall]
+ATA Version is:   ATA/ATAPI-6 published, ANSI INCITS 361-2002
+Local Time is:    Sun Mar  3 22:41:03 2024 UTC
+SMART support is: Unavailable - device lacks SMART capability.
+
+A mandatory SMART command failed: exiting. To continue, add one or more '-T permissive' options.

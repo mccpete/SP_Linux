@@ -1,0 +1,4 @@
+# <Device name>   <File system>
+# The file systems detected below are a combination of several sources. The values may differ from `blkid` and `parted`.
+/dev/sda1 ext4
+/dev/sda2 swap

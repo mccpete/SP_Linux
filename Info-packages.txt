@@ -1,0 +1,3 @@
+Image was saved by these Rescuezilla-related packages:
+ rescuezilla-2.4.2-1 partclone-0.3.20-1 util-linux-2.37.2-4ubuntu3 gdisk-1.0.8-4build1 
+Saved by 2.4.2 (64bit) 2023-03-06T000747.

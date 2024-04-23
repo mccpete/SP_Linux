@@ -1,0 +1,2 @@
+# This checksum is only for identifying the image. Created by the command: sha512sum clonezilla-img
+IMG_ID=3e268081fb69dafe6c842665420221f12e0d42f7da406ff8bbdd56dcc2ccc2518ae24fc58840da6857870726277fb88143469717a2f45d172621bb69f78a754d
